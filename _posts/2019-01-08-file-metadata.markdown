@@ -16,7 +16,7 @@ QuickTime:CreationDate, QuickTime:CreateDate, QuickTime:MediaCreateDate, QuickTi
 With exiftool you can modify the metadata of the broken files.  
 First, define a tag group in the .ExifTool_config file:
 
-```
+```perl
 %Image::ExifTool::Shortcuts::UserDefined = (
     QtDates => ['QuickTime:CreateDate','QuickTime:MediaCreateDate','QuickTime:TrackCreateDate'],
 );
