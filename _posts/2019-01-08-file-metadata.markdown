@@ -23,4 +23,4 @@ First, define a tag group in the .ExifTool_config file:
 ```
 
 Then execute  
-exiftool -ee -overwrite_original "-QtDates<QuickTime:CreationDate" -if "defined $QuickTime:CreationDate" .
+exiftool -r -ee -overwrite_original "-QtDates<QuickTime:CreationDate" -if "defined $QuickTime:CreationDate && $QuickTime:CreationDate lt $QuickTime:CreateDate" .
