@@ -9,7 +9,7 @@ excerpt_separator: Inconsistent Metadata handling for livephotos
 ---
 
 The videos and photos take with iPhone live photos on the same date are organized in different timeline stories when import to windows photos.  
-The photos seems fine bug the videos are totally mess up.  
+The photos seems fine but the videos are totally mess up.  
 It seems these metadata are the causes:  
 QuickTime:CreationDate, QuickTime:CreateDate, QuickTime:MediaCreateDate, QuickTime:TrackCreateDate
 
