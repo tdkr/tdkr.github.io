@@ -5,6 +5,7 @@ date:   2019-01-08 14:53:57 +0800
 tag:
   - windows
   - iPhone
+  - exiftool
 excerpt_separator: Inconsistent metadata handling for live photos
 ---
 
