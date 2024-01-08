@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
@@ -8,7 +8,7 @@ This is the base Jekyll theme. You can find out more info about customizing your
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+[minimal](https://github.com/pages-themes/minimal)
 
 You can find the source code for Jekyll at GitHub:
 [jekyll][jekyll-organization] /
