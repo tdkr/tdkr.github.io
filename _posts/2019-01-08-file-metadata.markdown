@@ -15,9 +15,8 @@ excerpt_separator: Inconsistent metadata handling for live photos
 {:toc}
 
 The videos and photos taken with iPhone live photos on the same date are organized in different timeline stories when imported to windows photos.  
-The photo seems fine but the videos are totally mess up.  
-It seems these metadata tags are the causes:  
-QuickTime:CreationDate, QuickTime:CreateDate, QuickTime:MediaCreateDate, QuickTime:TrackCreateDate
+The photo seems fine but the videos are totally mess up.
+It seems when your phone set to not export the raw photo, the following metadata fields have some problems: QuickTime:CreationDate, QuickTime:CreateDate, QuickTime:MediaCreateDate, QuickTime:TrackCreateDate
 
 With exiftool you can modify the metadata of the broken files batchly.  
 First, define a tag group in the .ExifTool_config file:
