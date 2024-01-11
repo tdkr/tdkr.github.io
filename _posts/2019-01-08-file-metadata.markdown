@@ -3,11 +3,7 @@ layout:  post
 title:  "Live Photo Metadata"
 date:  2019-01-08 14:53:57 +0800
 category: System
-tags:
-  - windows
-  - iPhone
-  - exiftool
-  - livephoto
+tags: [exiftool livephoto iPhone]
 excerpt_separator: Inconsistent metadata handling for live photos
 ---
 
@@ -31,5 +27,3 @@ Then execute
 ```bash
 exiftool -r -ee -overwrite_original "-QtDates<QuickTime:CreationDate" -if "defined $QuickTime:CreationDate && $QuickTime:CreationDate lt $QuickTime:CreateDate" -ext mov -v .
 ```
-
-Please leave comments if u have better solutions

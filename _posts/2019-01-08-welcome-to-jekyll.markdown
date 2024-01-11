@@ -2,7 +2,7 @@
 layout:  post
 title:  "Welcome to Jekyll!"
 date:  2019-01-08 14:42:57 +0800
-tags: jekyll
+tags: [jekyll]
 categories: Jekyll
 ---
 
