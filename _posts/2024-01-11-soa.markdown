@@ -17,7 +17,7 @@ tags:
 
 单体架构（Monolithic Architecture）是一种将所有功能打包在一个容器中运行的设计风格，一个实例中集成了一个系统的所有功能。通过负载均衡软件/设备实现多实例调用。
 
-![&#x5355;&#x4F53;&#x67B6;&#x6784;&#x793A;&#x4F8B;](/assets/monolithic-architecture.png)
+![](/assets/monolithic-architecture.png)
 
 上图为典型的单体架构示例，这种架构下我们多用Tomcat、JBoss或Weblogic做为服务容器，一个系统部署多个实例，负载均衡多通过随机或IP Hash等规则将终端请求路由到不同的实例。
 
@@ -35,7 +35,7 @@ tags:
 
 在了解到单体架构的这些不足后大家会自然而然地想到做如下的拆分：
 
-![&#x5355;&#x4F53;&#x62C6;&#x5206;](/assets//monolithic-split.png)
+![](/assets//monolithic-split.png)
 
 我们可以从业务上将不同的模块拆分到不同的系统中，模块1、模块2划到A系统，其它的模块划到B系统， 我们还可以将同一模块进一步拆分，比如模块3有Controller层和Service层，那就可以按技术分层将一个模块拆分成多个。 而无论我们怎么拆分都会面临一个问题：拆分后的服务怎么调度？这时就该介绍一下SOA了。
 
