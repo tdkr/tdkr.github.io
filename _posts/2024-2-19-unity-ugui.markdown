@@ -1,6 +1,6 @@
 ---
 layout:  post
-title:  "SOA的演进"
+title:  "UGUI渲染顺序"
 date:  2024-02-19 12:00:00 +0800
 category: unity
 tags:
@@ -11,7 +11,7 @@ tags:
 * content
 {:toc}
 
-## ugui 渲染顺序
+## UGUI渲染顺序
 
 1. Camera
 
@@ -35,4 +35,4 @@ tags:
 
 2. 特效
     
-    可参考方案: SpriteRender, UIParticleSystem, 不同 Canvas
+    可参考方案: SpriteRender, UIParticleSystem, 挂不同 Canvas
