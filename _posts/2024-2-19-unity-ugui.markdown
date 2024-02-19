@@ -1,17 +1,17 @@
 ---
 layout:  post
-title:  "UGUI渲染顺序"
+title:  "UGUI 渲染顺序"
 date:  2024-02-19 12:00:00 +0800
 category: unity
 tags:
-  - unity
-  - ugui
+  - Unity
+  - UGUI
 ---
 
 * content
 {:toc}
 
-## UGUI渲染顺序
+## UGUI 渲染顺序
 
 1. Camera
 
