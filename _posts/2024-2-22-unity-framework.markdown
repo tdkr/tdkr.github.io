@@ -44,6 +44,6 @@ tags:
 
 ## 方案
 
-* ILRuntime
+* ILRuntime, 内置.net解释器，两个虚拟机，跨域问题
 * xLua
-* HybridCLR
+* HybridCLR, 拓展 il2cpp, 由纯 AOT runtime 变成 AOT + Interpreter 的混合runtime，支持动态加载assembly
