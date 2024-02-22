@@ -7,7 +7,7 @@
 
 # Site settings
 title: The Dark Knight
-brief-intro: A Rookie Developer
+brief-intro: Stay Hungry, Stay Foolish
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tdkr.github.io" # the base hostname & protocol for your site
 
