@@ -57,7 +57,7 @@ tags:
 
   2019.3.11f版本中Graphic关键定义如下:
 
-  ```C#
+  ```csharp
   [DisallowMultipleComponent]
   [RequireComponent(typeof(RectTransform))]
   public abstract class Graphic : UIBehaviour, ICanvasElement
