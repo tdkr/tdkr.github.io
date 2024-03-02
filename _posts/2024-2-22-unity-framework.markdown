@@ -57,62 +57,62 @@ tags:
 
   2019.3.11f版本中Graphic关键定义如下:
 
-```C#
-[DisallowMultipleComponent]
-[RequireComponent(typeof(RectTransform))]
-public abstract class Graphic : UIBehaviour, ICanvasElement
-{
-    [SerializeField] protected Material m_Material;// 材质
-    [NonSerialized] private RectTransform m_RectTransform;// 绘制区域
-    [NonSerialized] protected Mesh m_CachedMesh;// 顶点属性
-    public virtual Texture mainTexture;// 主纹理
+  ```C#
+  [DisallowMultipleComponent]
+  [RequireComponent(typeof(RectTransform))]
+  public abstract class Graphic : UIBehaviour, ICanvasElement
+  {
+      [SerializeField] protected Material m_Material;// 材质
+      [NonSerialized] private RectTransform m_RectTransform;// 绘制区域
+      [NonSerialized] protected Mesh m_CachedMesh;// 顶点属性
+      public virtual Texture mainTexture;// 主纹理
 
-    public virtual void SetAllDirty()
-    {
-        …
-        SetLayoutDirty();
-        …
-        SetMaterialDirty();
-        …
-        SetVerticesDirty();
-    }
+      public virtual void SetAllDirty()
+      {
+          …
+          SetLayoutDirty();
+          …
+          SetMaterialDirty();
+          …
+          SetVerticesDirty();
+      }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        CacheCanvas();
-        GraphicRegistry.RegisterGraphicForCanvas(canvas, this);
+      protected override void OnEnable()
+      {
+          base.OnEnable();
+          CacheCanvas();
+          GraphicRegistry.RegisterGraphicForCanvas(canvas, this);
 
-        if (s_WhiteTexture == null)
-            s_WhiteTexture = Texture2D.whiteTexture;
+          if (s_WhiteTexture == null)
+              s_WhiteTexture = Texture2D.whiteTexture;
 
-        SetAllDirty();
-    }
+          SetAllDirty();
+      }
 
 
-    protected virtual void OnPopulateMesh(Mesh m)
-    {
-        OnPopulateMesh(s_VertexHelper);
-        s_VertexHelper.FillMesh(m);
-    }
+      protected virtual void OnPopulateMesh(Mesh m)
+      {
+          OnPopulateMesh(s_VertexHelper);
+          s_VertexHelper.FillMesh(m);
+      }
 
-    protected virtual void OnPopulateMesh(VertexHelper vh)
-    {
-        var r = GetPixelAdjustedRect();
-        var v = new Vector4(r.x, r.y, r.x + r.width, r.y + r.height);
+      protected virtual void OnPopulateMesh(VertexHelper vh)
+      {
+          var r = GetPixelAdjustedRect();
+          var v = new Vector4(r.x, r.y, r.x + r.width, r.y + r.height);
 
-        Color32 color32 = color;
-        vh.Clear();
-        vh.AddVert(new Vector3(v.x, v.y), color32, new Vector2(0f, 0f));
-        vh.AddVert(new Vector3(v.x, v.w), color32, new Vector2(0f, 1f));
-        vh.AddVert(new Vector3(v.z, v.w), color32, new Vector2(1f, 1f));
-        vh.AddVert(new Vector3(v.z, v.y), color32, new Vector2(1f, 0f));
+          Color32 color32 = color;
+          vh.Clear();
+          vh.AddVert(new Vector3(v.x, v.y), color32, new Vector2(0f, 0f));
+          vh.AddVert(new Vector3(v.x, v.w), color32, new Vector2(0f, 1f));
+          vh.AddVert(new Vector3(v.z, v.w), color32, new Vector2(1f, 1f));
+          vh.AddVert(new Vector3(v.z, v.y), color32, new Vector2(1f, 0f));
 
-        vh.AddTriangle(0, 1, 2);
-        vh.AddTriangle(2, 3, 0);
-    }
-}
-```
+          vh.AddTriangle(0, 1, 2);
+          vh.AddTriangle(2, 3, 0);
+      }
+  }
+  ```
 
 * UI.Text
 
